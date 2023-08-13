@@ -15,4 +15,4 @@ jobs:
 
         - name: ECHO
           run:
-            echo 'https://transport-service-app-backend.ts.cfapps.us10.hana.ondemand.com/v2/nodes/upload' 
+            echo '{$TMS_URL}/v2/nodes/upload'
