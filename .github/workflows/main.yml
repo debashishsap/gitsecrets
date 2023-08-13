@@ -12,3 +12,7 @@ jobs:
           uses: actions/setup-node@v1
           with:
             node-version: 16
+
+        - name: ECHO
+          run:
+            echo 'https://transport-service-app-backend.ts.cfapps.us10.hana.ondemand.com/v2/nodes/upload' 
