@@ -23,7 +23,7 @@ jobs:
 
         - name: ECHO
           run: |
-            echo ${{ inputs.tms }}
+            echo ${{ github.event.inputs.tms }}
             echo ${{ github.event.head_commit.message }}
             echo ${{ github.event.changes.body.from }}
             echo ${{ vars.TMS_URL }}
