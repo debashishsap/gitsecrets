@@ -10,6 +10,14 @@ on:
         description: 'SAP BTP Transport Management'        
         default: true
         required: false
+
+      op:
+        description: 'Deploy or Delete Apps'
+        type: choice
+        required: false
+        options:
+        - Deploy
+        - Delete
         
 jobs:
     Data:
@@ -30,6 +38,6 @@ jobs:
             echo '${{ vars.TMS_URL }}/v2/nodes/upload'
 
         - name: TMS Upload/Import
-          if: ${{ inputs.tms == 'true' }}
+          if: ${{ github.event.inputs.op == 'Deploy' }}
           run: |  
-            echo ${{ inputs.tms }}
+            echo ${{ github.event.inputs.op }}
