@@ -40,6 +40,6 @@ jobs:
             echo '${{ vars.TMS_URL }}/v2/nodes/upload'
 
         - name: TMS Upload/Import
-          if: ${{ env.tms }}
+          if: ${{ env.tms == 'true' }}
           run: |  
             echo ${{ env.tms }}
