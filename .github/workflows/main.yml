@@ -15,6 +15,7 @@ jobs:
 
         - name: ECHO
           run: |
+            echo ${{ github.event.head_commit.message }}
             echo ${{ github.event.changes.body.from }}
             echo ${{ vars.TMS_URL }}
             echo '${{ vars.TMS_URL }}/v2/nodes/upload'
