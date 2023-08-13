@@ -7,8 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       tms:
-        description: 'SAP BTP Transport Management'
-        type: boolean
+        description: 'SAP BTP Transport Management'        
         default: true
         required: true
         
@@ -24,6 +23,7 @@ jobs:
 
         - name: ECHO
           run: |
+            echo ${{ inputs.tms }}
             echo ${{ github.event.head_commit.message }}
             echo ${{ github.event.changes.body.from }}
             echo ${{ vars.TMS_URL }}
