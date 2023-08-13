@@ -9,7 +9,7 @@ on:
       tms:
         description: 'SAP BTP Transport Management'        
         default: true
-        required: true
+        required: false
         
 jobs:
     Data:
