@@ -15,5 +15,5 @@ jobs:
 
         - name: ECHO
           run: |
-            echo $TMS_URL
-            echo '${TMS_URL}/v2/nodes/upload'
+            echo ${{ vars.TMS_URL }}
+            echo '${{ vars.TMS_URL }}/v2/nodes/upload'
