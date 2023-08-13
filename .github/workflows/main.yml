@@ -1,8 +1,6 @@
 name: Deploy to Cloud Foundry
-
-env:  
+env:
     tms: true
-
 on:
   push:
     branches:
@@ -35,13 +33,13 @@ jobs:
 
         - name: ECHO
           run: |
-            echo ${{ github.event.inputs.tms }}
+            echo ${{ env.tms }}
             echo ${{ github.event.head_commit.message }}
             echo ${{ github.event.changes.body.from }}
             echo ${{ vars.TMS_URL }}
             echo '${{ vars.TMS_URL }}/v2/nodes/upload'
 
         - name: TMS Upload/Import
-          if: $tms
+          if: $env.tms
           run: |  
-            echo $tms
+            echo $env.tms
