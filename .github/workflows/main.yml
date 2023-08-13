@@ -15,6 +15,6 @@ jobs:
 
         - name: ECHO
           run: |
-            echo ${{ env }}
+            echo ${{ github.event.comment.body }}
             echo ${{ vars.TMS_URL }}
             echo '${{ vars.TMS_URL }}/v2/nodes/upload'
