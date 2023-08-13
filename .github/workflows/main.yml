@@ -1,6 +1,6 @@
 name: Deploy to Cloud Foundry
 env:
-    tms: true
+    tms: false
 on:
   push:
     branches:
